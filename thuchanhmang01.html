@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo và thao tác với mạng</title>
+</head>
+<body>
+<p>sample screen</p>
+<input type="text" id="inputvalue" >
+<input type="button" onclick="addvalue()" value="add">
+<input type="button" onclick="displayvalue()" value="display">
+<hr>
+<p id="result"></p>
+
+    <script>
+        let array=[];
+        let x=0;
+        function addvalue() {
+            array[x] =document.getElementById("inputvalue").value;
+            alert("nhap tiep");
+            x++;
+            document.getElementById('inputvalue').value="";
+        }
+        function displayvalue() {
+            let e="";
+            for (let i=0;i<array.length;i++) {
+                e+="giá trị của mảng tai vi tri "+i+" là: "+array[i]+"<br>";
+            }
+            document.getElementById("result").innerHTML=e;
+        }
+
+    </script>
+</body>
+</html>
